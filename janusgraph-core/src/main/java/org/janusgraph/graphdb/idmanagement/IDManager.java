@@ -19,7 +19,10 @@ import com.google.common.base.Preconditions;
 import org.janusgraph.core.InvalidIDException;
 import org.janusgraph.diskstorage.StaticBuffer;
 import org.janusgraph.diskstorage.util.BufferUtil;
+import org.janusgraph.diskstorage.util.ByteBufferUtil;
 import org.janusgraph.graphdb.database.idhandling.VariableLong;
+
+import java.nio.ByteBuffer;
 
 /**
  * Handles the allocation of ids based on the type of element

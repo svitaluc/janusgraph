@@ -143,6 +143,7 @@
         <module>janusgraph-doc</module>
         <module>janusgraph-solr</module>
         <module>janusgraph-examples</module>
+        <module>janusgraph-ap</module>
     </modules>
     <repositories>
         <repository>

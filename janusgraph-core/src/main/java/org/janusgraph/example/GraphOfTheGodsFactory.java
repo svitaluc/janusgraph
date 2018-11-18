@@ -25,12 +25,16 @@ import org.janusgraph.core.attribute.Geoshape;
 import org.janusgraph.core.schema.ConsistencyModifier;
 import org.janusgraph.core.schema.JanusGraphIndex;
 import org.janusgraph.core.schema.JanusGraphManagement;
+//import org.janusgraph.diskstorage.cql.CQLStoreManager;
+//import org.janusgraph.diskstorage.keycolumnvalue.StoreManager;
 import org.janusgraph.graphdb.database.StandardJanusGraph;
 import org.apache.tinkerpop.gremlin.process.traversal.Order;
 import org.apache.tinkerpop.gremlin.structure.Direction;
 import org.apache.tinkerpop.gremlin.structure.Edge;
 import org.apache.tinkerpop.gremlin.structure.T;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
+
+import java.util.Arrays;
 
 /**
  * Example Graph factory that creates a {@link JanusGraph} based on roman mythology.
@@ -125,6 +129,12 @@ public class GraphOfTheGodsFactory {
         Vertex hydra = tx.addVertex(T.label, "monster", "name", "hydra");
         Vertex cerberus = tx.addVertex(T.label, "monster", "name", "cerberus");
         Vertex tartarus = tx.addVertex(T.label, "location", "name", "tartarus");
+
+        System.out.println(saturn.id());
+        System.out.println(sky.id());
+        System.out.println(sea.id());
+        System.out.println(jupiter.id());
+        System.out.println(neptune.id());
 
         // edges
 

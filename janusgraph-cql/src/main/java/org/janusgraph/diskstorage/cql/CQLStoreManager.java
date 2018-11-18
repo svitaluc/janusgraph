@@ -144,7 +144,9 @@ public class CQLStoreManager extends DistributedStoreManager implements KeyColum
     private final StoreFeatures storeFeatures;
     private final Map<String, CQLKeyColumnValueStore> openStores;
     private final Deployment deployment;
-
+    public Cluster getCluster() {
+        return cluster;
+    }
     /**
      * Constructor for the {@link CQLStoreManager} given a JanusGraph {@link Configuration}.
      * @param configuration

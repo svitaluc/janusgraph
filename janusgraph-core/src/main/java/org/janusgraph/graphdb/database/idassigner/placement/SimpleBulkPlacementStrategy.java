@@ -90,7 +90,9 @@ public class SimpleBulkPlacementStrategy implements IDPlacementStrategy {
 
     @Override
     public int getPartition(InternalElement element) {
-        return nextPartitionID();
+        int pid = nextPartitionID();
+        System.out.println("pid: "+pid);
+        return pid;
     }
 
     @Override
@@ -98,6 +100,8 @@ public class SimpleBulkPlacementStrategy implements IDPlacementStrategy {
         int partitionID = nextPartitionID();
         for (Map.Entry<InternalVertex, PartitionAssignment> entry : vertices.entrySet()) {
             entry.setValue(new SimplePartitionAssignment(partitionID));
+            System.out.print(entry.getKey().property("name") );
+            System.out.print(": "+partitionID+"\n");
         }
     }
 
